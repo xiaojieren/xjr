@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <parameter name="URL" value="https://www.sss.com"/>
+    <parameter name="PORT" value="443" />
+		<test name="baiduTest">
+	    	<parameter name="URL" value="https://www.baidu.com"/> 
+				<classes> 
+					<class name="Test.baIduTest" />
+				</classes>
+		</test> 
+</suite> <!-- Suite -->

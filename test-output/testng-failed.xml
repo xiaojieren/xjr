@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="PORT" value="443"/>
+  <parameter name="URL" value="https://www.baidu.com"/>
+  <test name="baiduTest">
+    <parameter name="URL" value="https://www.baidu.com"/>
+    <classes>
+      <class name="Test.baIduTest"/>
+    </classes>
+  </test> <!-- baiduTest -->
+  <test name="baiduTest(failed)">
+    <parameter name="URL" value="https://www.baidu.com"/>
+    <classes>
+      <class name="Test.baIduTest">
+        <methods>
+          <include name="baidu" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="url"/>
+        </methods>
+      </class> <!-- Test.baIduTest -->
+    </classes>
+  </test> <!-- baiduTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
